@@ -47,3 +47,19 @@ Remaining (Play Console, in the owner's Chrome — https://play.google.com/conso
 6. After internal-test install proves the TWA opens full-screen, promote to Production and submit for review.
 
 Build-environment notes (Windows): bubblewrap config `jdkPath` must be the 8.3 short path (spaces break apksigner); `androidSdkPath` is `…\Sdk\cmdline-tools\latest` with a junction `build-tools → ..\..\build-tools`; `local.properties` points Gradle at the real SDK root; run `bubblewrap build` from PowerShell with the project folder on PATH.
+
+## Status 2026-10-18 — Play Console (done in owner's Chrome, HomFax TM account)
+- App created: "Echoes of the Estate", com.echoesestate.game, Game, Free. App id 4976442430252424047.
+- Internal testing release **2 (0.1.0)** published (versionCode 2, minSdk 24, targetSdk 36). Tester list "Echoes Internal" (owner's two addresses). Opt-in link: https://play.google.com/apps/internaltest/4701312758709011886
+- Play App Signing on (Google-managed key). App signing SHA-256 `BB:C1:1B:F3:…:98:6D` added to assetlinks.json (live) and twa-manifest.json.
+- Default store listing saved (text from PLAY-LISTING.md, icon, feature graphic, 3 screenshots, AI assets: not labelled).
+- App content declarations saved: privacy policy, ads (none), sign-in (none required), content rating (IARC: ESRB Everyone, all "No"), target audience 13+, data safety (no collection/sharing), advertising ID (not used), government (no), financial (none), health (none).
+- Store settings: Game › Puzzle; contact email + website published.
+- "Send app for review" is still locked: Play requires a **closed test with ≥12 opted-in testers for 14 days** on this (personal) developer account before production access can be requested. Internal testing is unreviewed and shows the temporary name "com.echoesestate.game (unreviewed)" until then.
+
+Next (owner, or Claude with permission):
+1. Closed testing › Alpha › Create new release › Add from library (bundle 2) › release notes › Save and publish.
+2. Add testers (12+ real people) to the Alpha track and send them the opt-in link.
+3. After 14 days with ≥12 opted-in, Dashboard › Apply for production access, then promote to Production.
+
+Lessons: build-tools 34 junction + 8.3 JDK path + local.properties are all required on this machine; the Play Console asset uploader has no file input — drop events built from fetched files (GitHub Pages URLs) work; dialogs that say "Publish change on Google Play?" must be confirmed before navigating away.
