@@ -1,0 +1,19 @@
+{
+  "name": "Echoes of the Estate",
+  "short_name": "Echoes",
+  "description": "A narrative merge mystery. Restore Halloway House, route the wires, find the room that is not on the plans.",
+  "id": "/",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f1a1f",
+  "theme_color": "#0f1a1f",
+  "categories": ["games", "puzzle"],
+  "icons": [
+    { "src": "./icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

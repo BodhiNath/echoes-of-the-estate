@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Echoes of the Estate</title>
+<meta name="description" content="A narrative merge mystery. Restore Halloway House, route the wires, and find the room that is not on the plans.">
+<meta name="theme-color" content="#0f1a1f">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="./css/game.css">
+</head>
+<body>
+<div id="app">
+  <div id="hud">
+    <div class="stat" id="energyBar" title="Energy regenerates one point every 90 seconds"><i></i><span>⚡</span><b id="energyVal">100/100</b><small id="energyNext">full</small></div>
+    <div class="stat"><span>🪙</span><b id="coinsVal">0</b></div>
+    <div class="stat"><span>💎</span><b id="gemsVal">0</b></div>
+    <button id="settingsBtn" aria-label="Settings">⚙</button>
+  </div>
+
+  <section id="title" class="screen active">
+    <div class="house">🏚️</div>
+    <h1>Echoes of the Estate</h1>
+    <p class="sub">You inherited a house on the coast, a box of cassette tapes, and a question nobody in town will answer.</p>
+    <button class="btn brass" id="btnContinue">Continue</button>
+    <button class="btn ghost" id="btnNew">Begin</button>
+    <p class="note">Works offline. Nothing to buy. Saves on this device.</p>
+  </section>
+
+  <section id="hub" class="screen"></section>
+
+  <section id="boardScreen" class="screen">
+    <div id="boardWrap">
+      <div id="info"></div>
+      <div id="board"></div>
+      <div class="gemrow">
+        <button class="btn" id="boardRefill">💎 Refill energy</button>
+        <button class="btn" id="boardSweep">💎 Sweep tier-1</button>
+      </div>
+      <p class="note">Tap a generator to drop an item (1 energy). Drag matching items together to merge. Five touching = two of the next tier. Tap an item to deliver it.</p>
+    </div>
+  </section>
+
+  <section id="puzzleScreen" class="screen">
+    <h2 id="puzzleTitle">Breaker panel</h2>
+    <p class="note">Drag from a terminal to its match. Wires cannot cross. Wire every cell for bonus gems.</p>
+    <div id="wires"></div>
+    <div class="prow"><span id="pProgress"></span><span style="flex:1"></span><button class="btn" id="pHint">Hint</button><button class="btn" id="pReset">Reset</button></div>
+    <div id="hintText"></div>
+  </section>
+
+  <section id="shop" class="screen"></section>
+
+  <nav id="nav">
+    <button id="navHub"><span class="badge" id="navHubBadge">!</span><span class="ic">🏚️</span>Estate</button>
+    <button id="navBoard"><span class="ic">🧰</span>Workbench</button>
+    <button id="navShop"><span class="ic">💎</span>Store</button>
+  </nav>
+
+  <div id="story"><div class="sheet"><div class="chap"></div><div class="who"></div><div class="line"></div><div class="next"><span class="count"></span><button class="btn brass">Next</button></div></div></div>
+
+  <div id="settings"><div class="card">
+    <h2>Settings</h2>
+    <div class="row"><span>Sound</span><div class="toggle" id="tSound"></div></div>
+    <div class="row"><span>Haptics</span><div class="toggle" id="tHaptics"></div></div>
+    <div class="row"><span>Reset game</span><button class="btn" id="resetBtn">Erase progress</button></div>
+    <p class="note" id="verText"></p>
+    <p class="note">No account, no analytics, no ads. Your save lives in this browser only.</p>
+    <button class="btn wide" id="settingsClose">Close</button>
+  </div></div>
+</div>
+<script type="module" src="./js/app.js"></script>
+</body>
+</html>
