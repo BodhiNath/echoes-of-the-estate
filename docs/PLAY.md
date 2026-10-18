@@ -63,3 +63,10 @@ Next (owner, or Claude with permission):
 3. After 14 days with ≥12 opted-in, Dashboard › Apply for production access, then promote to Production.
 
 Lessons: build-tools 34 junction + 8.3 JDK path + local.properties are all required on this machine; the Play Console asset uploader has no file input — drop events built from fetched files (GitHub Pages URLs) work; dialogs that say "Publish change on Google Play?" must be confirmed before navigating away.
+
+## Status 2026-10-18 (later) — submitted for review
+- Closed testing › Alpha: release 2 (0.1.0) saved; 177 countries + rest of world; testers = Echoes Internal only; feedback email set.
+- **16 changes sent to Google for review** from Publishing overview (quick checks, then review; typically up to 7 days). Internal testing stays live meanwhile.
+- Closed-test opt-in link (works once review passes and the track is live): https://play.google.com/apps/testing/com.echoesestate.game
+- Owner to do: add real testers to the "Echoes Internal" email list (Internal/Closed testing › Testers › arrow on the list) until ≥12 have opted in via the link above; after 14 continuous days, Dashboard › Apply for production access.
+- Note: the pre-existing lists Beta Testers (8), Beta (9) and Pipely Beta Test (10) were deliberately left unticked to keep the game separate from Pipely; ticking them is the fastest route to 12 if the owner is fine with that.
